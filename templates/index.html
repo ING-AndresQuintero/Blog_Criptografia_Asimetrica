@@ -1,0 +1,451 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>CriptoSeguridad | RSA</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/estilos.css') }}">
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="logo">
+            <span>◈</span> CRIPTOSEGURIDAD
+        </div>
+
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#blog">Blog</a>
+            <a href="#laboratorio">Laboratorio RSA</a>
+            <a href="#acerca">Acerca de</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="hero" id="inicio">
+
+            <div class="hero-content">
+
+                <span class="etiqueta">
+                    SEGURIDAD INFORMÁTICA
+                </span>
+
+                <h1>
+                    El poder de la
+                    <span>criptografía asimétrica</span>
+                </h1>
+
+                <p>
+                    Descubre cómo funcionan las claves públicas,
+                    las claves privadas y las firmas digitales
+                    para proteger la información en el mundo digital.
+                </p>
+
+                <div class="botones">
+                    <a href="#blog" class="btn-principal">
+                        Explorar el blog
+                    </a>
+
+                    <a href="#laboratorio" class="btn-secundario">
+                        Probar RSA
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="hero-icon">
+                <div class="circulo">
+                    <span>🔐</span>
+                </div>
+                <p>Protección digital inteligente</p>
+            </div>
+
+        </section>
+
+        <section class="contenido" id="blog">
+
+            <h2>Fundamentos de la criptografía</h2>
+
+            <p>
+                Aprende los conceptos esenciales de los
+                criptosistemas de clave pública.
+            </p>
+
+            
+<div class="tarjetas">
+
+    <article class="tarjeta" id="entrada1">
+        <span>01 | FUNDAMENTOS</span>
+        <h3>¿Qué es la criptografía asimétrica?</h3>
+        <p>
+            La criptografía asimétrica es un sistema de protección
+            de información que utiliza dos claves relacionadas:
+            una clave pública y una clave privada.
+        </p>
+        <p>
+            La clave pública puede compartirse con otras personas,
+            mientras que la clave privada debe permanecer protegida
+            por su propietario.
+        </p>
+        <p>
+            Este mecanismo permite proteger comunicaciones,
+            autenticar usuarios y verificar la integridad
+            de la información mediante firmas digitales.
+        </p>
+        <h4>Referencia bibliográfica</h4>
+        <small>
+            Hernández, L. (2016). Criptografía de clave asimétrica.
+            En La criptografía (pp. 93-134). CSIC.
+        </small>
+    </article>
+
+    <article class="tarjeta" id="entrada2">
+        <span>02 | ALGORITMOS</span>
+        <h3>Funcionamiento y algoritmos principales</h3>
+        <p>
+            El funcionamiento se basa en un par de claves
+            matemáticamente relacionadas. Lo que se cifra con
+            una clave puede recuperarse mediante la clave
+            correspondiente, según el esquema utilizado.
+        </p>
+        <p>
+            Entre los algoritmos más conocidos se encuentran:
+        </p>
+        <ul>
+            <li><strong>RSA:</strong> permite cifrado y firmas digitales.</li>
+            <li><strong>Diffie-Hellman:</strong> permite acordar claves secretas.</li>
+            <li><strong>ECC:</strong> utiliza curvas elípticas para
+                ofrecer seguridad con claves más pequeñas.</li>
+            <li><strong>ECDSA:</strong> permite generar y verificar
+                firmas digitales.</li>
+        </ul>
+        <h4>Referencia bibliográfica</h4>
+        <small>
+            Hernández, L. (2016). La criptografía.
+            CSIC.
+        </small>
+    </article>
+
+    <article class="tarjeta" id="entrada3">
+        <span>03 | COMPARACIÓN</span>
+        <h3>Ventajas y desventajas</h3>
+        <p>
+            La criptografía asimétrica facilita el intercambio
+            seguro de información sin tener que compartir
+            previamente una clave secreta.
+        </p>
+        <p><strong>Ventajas:</strong></p>
+        <ul>
+            <li>Permite el uso de firmas digitales.</li>
+            <li>Facilita el intercambio de claves.</li>
+            <li>Permite verificar autenticidad e integridad.</li>
+        </ul>
+        <p><strong>Desventajas:</strong></p>
+        <ul>
+            <li>Puede requerir más recursos computacionales.</li>
+            <li>Necesita proteger adecuadamente las claves privadas.</li>
+            <li>Requiere validar la autenticidad de las claves públicas.</li>
+        </ul>
+        <p>
+            A diferencia de AES, que utiliza una misma clave
+            secreta para cifrar y descifrar, RSA utiliza un
+            par de claves relacionadas.
+        </p>
+        <h4>Referencia bibliográfica</h4>
+        <small>
+            Maillo, J. (2017). Sistemas seguros de acceso y
+            transmisión de datos. RA-MA.
+        </small>
+    </article>
+
+    <article class="tarjeta" id="entrada4">
+        <span>04 | CASO PRÁCTICO</span>
+        <h3>Implementación de RSA con Python</h3>
+        <p>
+            Para demostrar el funcionamiento de la criptografía
+            asimétrica se propone desarrollar una aplicación
+            utilizando Python y la biblioteca cryptography.
+        </p>
+        <p>
+            La aplicación permitirá generar un par de claves RSA,
+            cifrar un mensaje con la clave pública y descifrarlo
+            con la clave privada.
+        </p>
+        <p>
+            También permitirá crear una firma digital con la
+            clave privada y verificarla con la clave pública.
+        </p>
+        <p>
+            Se utilizarán RSA-OAEP con SHA-256 para cifrado y
+            RSA-PSS con SHA-256 para firmas digitales.
+        </p>
+        <h4>Referencia bibliográfica</h4>
+        <small>
+            Python Cryptographic Authority. (s. f.).
+            Cryptography documentation.
+        </small>
+    </article>
+
+    <article class="tarjeta" id="entrada5">
+        <span>05 | RECOMENDACIONES</span>
+        <h3>Buenas prácticas de seguridad</h3>
+        <p>
+            La implementación de criptografía asimétrica debe
+            acompañarse de buenas prácticas para evitar
+            vulnerabilidades y proteger la información.
+        </p>
+        <ul>
+            <li>Proteger las claves privadas mediante controles
+                de acceso y almacenamiento seguro.</li>
+            <li>Utilizar algoritmos y parámetros criptográficos
+                actualizados.</li>
+            <li>Validar certificados y claves públicas.</li>
+            <li>Implementar copias de seguridad seguras.</li>
+            <li>Realizar pruebas de seguridad periódicas.</li>
+            <li>Evitar exponer información sensible en registros
+                o interfaces públicas.</li>
+        </ul>
+        <p>
+            Como estrategia adicional, se recomienda utilizar
+            cifrado híbrido: RSA para proteger una clave AES
+            y AES para cifrar grandes cantidades de información.
+        </p>
+        <h4>Referencia bibliográfica</h4>
+        <small>
+            OWASP Foundation. (s. f.). Threat Modeling Process.
+        </small>
+    </article>
+
+</div>
+</section>
+
+
+        </section>
+
+        
+<section class="laboratorio" id="laboratorio">
+
+    <span class="etiqueta">EXPERIENCIA INTERACTIVA</span>
+
+    <h2>Laboratorio criptográfico RSA</h2>
+
+    <p>
+        Experimenta con criptografía asimétrica utilizando
+        Python, RSA de 2048 bits y SHA-256.
+    </p>
+
+    <div class="panel-rsa">
+
+        <h3>Prueba el funcionamiento de RSA</h3>
+
+        <p>
+            Escribe un mensaje para realizar una operación
+            criptográfica.
+        </p>
+
+        <form action="/laboratorio" method="POST">
+
+            <label for="mensaje">Mensaje de prueba</label>
+
+            <textarea
+                id="mensaje"
+                name="mensaje"
+                rows="5"
+                maxlength="190"
+                placeholder="Escribe aquí el mensaje que deseas proteger..."
+                required>{{ mensaje|default('') }}</textarea>
+
+            <div class="acciones-rsa">
+
+                <button type="submit"
+                        name="accion"
+                        value="cifrar"
+                        class="btn-principal">
+                    Cifrar y descifrar
+                </button>
+
+                <button type="submit"
+                        name="accion"
+                        value="firmar"
+                        class="btn-secundario">
+                    Generar firma digital
+                </button>
+                <button type="submit"
+        name="accion"
+        value="ataque"
+        class="btn-secundario">
+    Simular alteración de mensaje
+</button>
+
+            </div>
+
+        </form>
+
+        {% if resultado %}
+
+            <div class="resultado-rsa">
+
+                {% if resultado.error %}
+
+                    <h3>Error en la operación</h3>
+
+                    <p class="mensaje-error">
+                        {{ resultado.error }}
+                    </p>
+
+                {% else %}
+
+                    <h3>Resultado de la operación</h3>
+
+                    <p class="mensaje-exito">
+                        {{ resultado.estado }}
+                    </p>
+
+                    {% if resultado.mensaje_cifrado %}
+
+                        <h4>Mensaje cifrado (Base64)</h4>
+
+                        <textarea readonly rows="5">{{ resultado.mensaje_cifrado }}</textarea>
+
+                        <h4>Mensaje descifrado</h4>
+
+                        <textarea readonly rows="3">{{ resultado.mensaje_descifrado }}</textarea>
+
+                    {% endif %}
+
+                    {% if resultado.firma %}
+
+                        <h4>Firma digital (Base64)</h4>
+
+                        <textarea readonly rows="5">{{ resultado.firma }}</textarea>
+                        
+{% if resultado.ataque %}
+
+    <h4>Simulación de ataque</h4>
+
+    <p class="mensaje-error">
+        {{ resultado.ataque }}
+    </p>
+
+    <h4>Mensaje original</h4>
+    <textarea readonly rows="3">{{ resultado.mensaje_original }}</textarea>
+
+    <h4>Mensaje modificado por el atacante</h4>
+    <textarea readonly rows="3">{{ resultado.mensaje_alterado }}</textarea>
+
+{% endif %}
+
+
+                    {% endif %}
+
+                    {% if resultado.clave_publica %}
+
+                        <h4>Clave pública RSA</h4>
+
+                        <textarea readonly rows="6">{{ resultado.clave_publica }}</textarea>
+
+                    {% endif %}
+
+                {% endif %}
+
+            </div>
+
+        {% endif %}
+
+    </div>
+
+    <p class="nota-seguridad">
+        Esta herramienta es una demostración académica.
+        Las claves se generan temporalmente para cada operación.
+        No utilices información confidencial o datos reales.
+    </p>
+
+</section>
+
+
+    </main>
+
+    <footer id="acerca">
+        <p>
+            CRIPTOSEGURIDAD | Proyecto académico de
+            Diseño de Software.
+        </p>
+        <p>Desarrollado con Python y Flask.</p>
+        
+<section class="panel-pruebas" id="pruebas">
+
+    <span class="etiqueta">CONTROL DE CALIDAD</span>
+
+    <h2>Panel de pruebas de seguridad</h2>
+
+    <p>
+        Ejecuta pruebas automáticas para comprobar
+        el funcionamiento de los mecanismos criptográficos RSA.
+    </p>
+
+    <div class="resumen-pruebas">
+
+        <div class="indicador">
+            <span>{{ total_pruebas|default(0) }}</span>
+            <p>Pruebas ejecutadas</p>
+        </div>
+
+        <div class="indicador">
+            <span>{{ pruebas_aprobadas|default(0) }}</span>
+            <p>Pruebas aprobadas</p>
+        </div>
+
+        <div class="indicador">
+            <span>
+                {{ (total_pruebas|default(0)) - (pruebas_aprobadas|default(0)) }}
+            </span>
+            <p>Pruebas fallidas</p>
+        </div>
+
+    </div>
+
+    <a href="/pruebas" class="btn-principal boton-pruebas">
+        Ejecutar pruebas de seguridad
+    </a>
+
+    {% if pruebas is defined %}
+
+    <div class="tabla-pruebas">
+
+        <h3>Resultados de las pruebas</h3>
+
+        {% for prueba in pruebas %}
+
+        <div class="fila-prueba">
+
+            <div>
+                <strong>{{ prueba.codigo }} - {{ prueba.nombre }}</strong>
+                <p>{{ prueba.detalle }}</p>
+            </div>
+
+            <span class="{{ 'estado-aprobado' if prueba.aprobada else 'estado-fallido' }}">
+                {{ prueba.estado }}
+            </span>
+
+        </div>
+
+        {% endfor %}
+
+    </div>
+
+    {% endif %}
+
+</section>
+
+    </footer>
+
+</body>
+</html>
